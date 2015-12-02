@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <connectionOption></connectionOption>
+ <rdmgr>
+  <timestamp type="u64_t">1448734851</timestamp>
+  <hostname>macpro</hostname>
+  <os>windows</os>
+  <product>Intel® Inspector XE 2013 Update 7</product>
+  <buildNumber type="s32_t">304368</buildNumber>
+  <logicalCPUCount type="s32_t">8</logicalCPUCount>
+  <CPUFrequency type="s64_t">2700000000</CPUFrequency>
+ </rdmgr>
+ <All_Configurations-All_Platforms>
+  <searchDirs>
+   <searchCategory>
+    <category type="u8_t">1</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">2</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">3</category>
+   </searchCategory>
+   <searchCategory>
+    <category type="u8_t">4</category>
+   </searchCategory>
+  </searchDirs>
+  <target_settings>
+   <selected_workload>launch</selected_workload>
+   <result_dir>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector</result_dir>
+   <workloads>
+    <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+     <workload>
+      <targetName>launch</targetName>
+      <result_directory.path>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector\r@@@{at}</result_directory.path>
+      <launch_app.app_to_launch>C:\dds\pubs\current\effective-debugging\src\omp-race\race.exe</launch_app.app_to_launch>
+      <launch_app.working_folder>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector</launch_app.working_folder>
+      <search_directories type="bag"/>
+     </workload>
+    </launch>
+    <localhost>
+     <launch type="pointer" type_id="dasID_cctrl2::ApplicationWorkload" ptr_type="dasID_cctrl2::IWorkload">
+      <workload>
+       <targetName>launch</targetName>
+       <launch_app.working_folder>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector</launch_app.working_folder>
+       <launch_app.inherit_sys_environment type="bool">true</launch_app.inherit_sys_environment>
+       <result_directory.path>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector\r@@@{at}</result_directory.path>
+       <launch.userapppath>C:\dds\pubs\current\effective-debugging\src\omp-race\fixed.exe</launch.userapppath>
+       <launch_app.app_to_launch>C:\dds\pubs\current\effective-debugging\src\omp-race\fixed.exe</launch_app.app_to_launch>
+       <search_directories type="bag"/>
+       <context>
+        <contextValue>
+         <id>appdebug</id>
+         <value>off</value>
+        </contextValue>
+        <contextValue>
+         <id>custom_debugger</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>debug_this_problem</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>debug_using</id>
+         <value>gdb</value>
+        </contextValue>
+        <contextValue>
+         <id>heartbeat</id>
+         <value type="bool">true</value>
+        </contextValue>
+        <contextValue>
+         <id>modules_switch</id>
+         <value>knob.modules_switch.include</value>
+        </contextValue>
+        <contextValue>
+         <id>mrte_mode</id>
+         <value>auto</value>
+        </contextValue>
+        <contextValue>
+         <id>process_for_analysis</id>
+         <value></value>
+        </contextValue>
+        <contextValue>
+         <id>suppressions</id>
+         <value>delete</value>
+        </contextValue>
+        <contextValue>
+         <id>targetType</id>
+         <value>launch</value>
+        </contextValue>
+       </context>
+      </workload>
+     </launch>
+    </localhost>
+   </workloads>
+   <selected_workload>
+    <localhost>launch</localhost>
+   </selected_workload>
+   <result_dir>
+    <localhost>C:\dds\pubs\current\effective-debugging\src\omp-race\iinspector</localhost>
+   </result_dir>
+  </target_settings>
+  <analysis_type_settings>
+   <selected_analysis_type_path>C:\Program Files (x86)\IntelSWTools\Inspector XE 2016\config\analysis_type\ti3.cfg</selected_analysis_type_path>
+  </analysis_type_settings>
+ </All_Configurations-All_Platforms>
+ <contextValues>
+  <contextValue>
+   <id>emulatorByCtxKnob</id>
+   <value></value>
+  </contextValue>
+ </contextValues>
+ <suppressions type="bag"/>
+</root>
