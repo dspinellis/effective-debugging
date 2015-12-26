@@ -3,24 +3,22 @@
 #include "lua5.2/lauxlib.h"
 
 // Functions exposed to Lua
-static int l_sin(lua_State *L)
-{
-    // Verify that the argument is a number
-    double d = luaL_checknumber(L, 1);
+static int l_sin(lua_State *L) {
+    double value_as_number = luaL_checknumber(L, 1);
     // Call the function, and return the result
-    lua_pushnumber(L, sin(d));
+    lua_pushnumber(L, sin(value_as_number));
     return 1;  // Single result
 }
 
 static int l_cos(lua_State *L) {
-    double d = luaL_checknumber(L, 1);
-    lua_pushnumber(L, cos(d));
+    double value_as_number = luaL_checknumber(L, 1);
+    lua_pushnumber(L, cos(value_as_number));
     return 1;
 }
 
 static int l_tan(lua_State *L) {
-    double d = luaL_checknumber(L, 1);
-    lua_pushnumber(L, tan(d));
+    double value_as_number = luaL_checknumber(L, 1);
+    lua_pushnumber(L, tan(value_as_number));
     return 1;
 }
 
@@ -39,6 +37,6 @@ int main() {
 
     // Load and run the debug file
     luaL_dofile(L, "debug.lua");
-    printf("Done\n");
+    puts("Done");
     return 0;
 }
