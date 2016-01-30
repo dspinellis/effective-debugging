@@ -3,7 +3,7 @@
 int
 main()
 {
-	printf("S=%d I=%d L=%d LL=%d P=%d\n", sizeof(short),
+	printf("S=%zu I=%zu L=%zu LL=%zu P=%zu\n", sizeof(short),
 	    sizeof(int), sizeof(long),
 	    sizeof(long long), sizeof(char *));
 }
