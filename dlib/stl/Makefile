@@ -1,4 +1,11 @@
+# GCC options
 CXXFLAGS=-g -D_GLIBCXX_DEBUG -std=c++11
+
+# Microsoft Visual Studio C options
+ifdef MSVC
+CXXFLAGS=/EHsc /MDd
+CXX=cl
+endif
 
 demo: access intersection
 	-./access
