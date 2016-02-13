@@ -1,6 +1,12 @@
 CFLAGS=-g -pthread
+CXXFLAGS=-g -std=c++11 -pthread
+PROGS=deadlock-pt deadlock
 
-deadlock: deadlock.c
+all: $(PROGS)
+
+deadlock-pt: deadlock-pt.c
+
+deadlock: deadlock.cpp
 
 clean:
-	rm -f deadlock .gdb_history
+	rm -f $(PROGS) .gdb_history core
