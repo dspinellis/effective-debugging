@@ -23,8 +23,7 @@ public class LockContention {
                 Validator validator = schema.newValidator();
                 validator.validate(xmlFile);
             } catch (Exception e) {
-              System.out.println(xmlFile.getSystemId() + " failed");
-              System.out.println("Reason: " + e.getLocalizedMessage());
+              System.out.println("Validation failed: " + e);
             }
         };
         ExecutorService executor = Executors.newFixedThreadPool(nThreads);
