@@ -1,27 +1,23 @@
-import java.io.File;
-import javax.xml.XMLConstants;
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.validation.*;
+import java.security.*;
 import java.util.concurrent.*;
 
 public class LockContention {
     static public void main(String args[]) {
         int nThreads = Integer.parseInt(args[0]);
         int nTasks = Integer.parseInt(args[1]);
+
         Runnable task = () -> {
-            File schemaFile = new File("xhtml1-transitional.xsd");
-            Source xmlFile = new StreamSource(new File("w3c.xml"));
-            SchemaFactory schemaFactory = SchemaFactory
-                .newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
             try {
-                Schema schema = schemaFactory.newSchema(schemaFile);
-                Validator validator = schema.newValidator();
-                validator.validate(xmlFile);
+                KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA", "SUN");
+
+                SecureRandom random = SecureRandom.getInstanceStrong();
+                keyGen.initialize(2048, random);
+                KeyPair pair = keyGen.generateKeyPair();
             } catch (Exception e) {
-              System.out.println("Validation failed: " + e);
+              System.out.println("Generation failed: " + e);
             }
         };
+
         ExecutorService executor = Executors.newFixedThreadPool(nThreads);
         for (int i = 0; i < nTasks; i++)
             executor.submit(task);
