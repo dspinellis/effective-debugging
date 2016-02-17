@@ -2,12 +2,21 @@ import java.util.Random;
 
 public class LockContention {
     static Random randomGen = new Random();
-    static int NTHREAD = 100;
+    static int NTHREAD = 7;
+    static Object lock = new Object();
+    static int counter = 0;
 
     static public void main(String args[]) {
         Runnable task = () -> {
-            for (int i = 0; i < 10000000; i++)
-                randomGen.nextInt(1000);
+            for (int i = 0; i < 100000; i++)
+                synchronized (lock) {
+                    try {
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        System.err.println("Interrupted sleep: " + e);
+                    }
+                    counter++;
+                }
         };
 
         Thread threads[] = new Thread[NTHREAD];
@@ -19,7 +28,7 @@ public class LockContention {
             for (Thread t : threads)
                 t.join();
         } catch (InterruptedException e) {
-            System.err.println("Interrupted: " + e);
+            System.err.println("Interrupted join: " + e);
         }
     }
 }
