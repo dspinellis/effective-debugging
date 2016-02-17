@@ -10,6 +10,5 @@ main()
 	std::vector<int> result;
 
 	std::set_intersection(s1.begin(), s1.end(),
-		s2.begin(), s2.end(),
-		std::back_inserter(result));
+		s2.begin(), s2.end(), std::back_inserter(result));
 }
