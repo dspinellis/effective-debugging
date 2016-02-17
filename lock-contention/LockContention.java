@@ -1,18 +1,23 @@
 import java.security.*;
 import java.util.concurrent.*;
+import java.util.HashMap;
 
 public class LockContention {
     static public void main(String args[]) {
-        int nThreads = Integer.parseInt(args[0]);
-        int nTasks = Integer.parseInt(args[1]);
+        int nTasks = Integer.parseInt(args[0]);
+        int nThreads = Integer.parseInt(args[1]);
+        HashMap<PublicKey, PrivateKey> map = new HashMap<PublicKey, PrivateKey>();
 
         Runnable task = () -> {
             try {
-                KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA", "SUN");
+                synchronized(map) {
+                    KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DSA", "SUN");
 
-                SecureRandom random = SecureRandom.getInstanceStrong();
-                keyGen.initialize(2048, random);
-                KeyPair pair = keyGen.generateKeyPair();
+                    SecureRandom random = SecureRandom.getInstanceStrong();
+                    keyGen.initialize(2048, random);
+                    KeyPair pair = keyGen.generateKeyPair();
+                    map.put(pair.getPublic(), pair.getPrivate());
+                }
             } catch (Exception e) {
               System.out.println("Generation failed: " + e);
             }
