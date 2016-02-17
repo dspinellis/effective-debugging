@@ -1,5 +1,5 @@
 public class Deadlock {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Object mutex1 = new Object();
         Object mutex2 = new Object();
 

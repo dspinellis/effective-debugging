@@ -1,5 +1,5 @@
 class ExerciseCounter {
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         final Counter c = new Counter();
         final int ITERATIONS = 100000;
 

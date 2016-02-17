@@ -1,5 +1,5 @@
 class RankingRunner {
-    public static void main(String argv[]) {
+    public static void main(String[] args) {
         int t[] = new int[5];
 
         t[0] = 4;

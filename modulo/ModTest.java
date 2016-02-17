@@ -9,7 +9,7 @@ class ModTest {
         return Math.abs(a - b) < (a + b) / 1e10;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         assert almostEqual(normalizeAngle(0.1), 0.1);
         assert almostEqual(normalizeAngle(Math.PI), Math.PI);
         assert almostEqual(normalizeAngle(0.1 + 2 * Math.PI), 0.1);

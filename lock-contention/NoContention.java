@@ -2,7 +2,7 @@ import java.security.*;
 import java.util.concurrent.*;
 
 public class NoContention {
-    static public void main(String args[]) {
+    static public void main(String[] args) {
         int nTasks = Integer.parseInt(args[0]);
         int nThreads = Integer.parseInt(args[1]);
         ConcurrentHashMap<PublicKey, PrivateKey> map =

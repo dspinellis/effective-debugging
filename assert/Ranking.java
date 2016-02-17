@@ -1,6 +1,6 @@
 class Ranking {
     /** Return the maximum number in non-empty array v */
-    public static int findMax(int v[]) {
+    public static int findMax(int[] v) {
         int max = Integer.MIN_VALUE;
 
         // Precondition: v[] is not empty

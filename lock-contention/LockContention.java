@@ -3,7 +3,7 @@ import java.util.concurrent.*;
 import java.util.HashMap;
 
 public class LockContention {
-    static public void main(String args[]) {
+    static public void main(String[] args) {
         int nTasks = Integer.parseInt(args[0]);
         int nThreads = Integer.parseInt(args[1]);
         HashMap<PublicKey, PrivateKey> map = new HashMap<PublicKey,
