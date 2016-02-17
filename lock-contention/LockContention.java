@@ -6,10 +6,6 @@ import javax.xml.validation.*;
 import java.util.concurrent.*;
 
 public class LockContention {
-    static int NTHREAD = 7;
-    static Integer counter = new Integer(0);
-    static int numberOfDocuments = 100000;
-
     static public void main(String args[]) {
         int nThreads = Integer.parseInt(args[0]);
         int nTasks = Integer.parseInt(args[1]);
