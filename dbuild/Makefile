@@ -9,3 +9,8 @@ osx: dbuild.c
 # Deterministic Linux
 linux: ndbuild
 	setarch `uname -m` -R ./$?
+
+# Deterministic Visual C
+vc:
+	cl dbuild.c /link /DYNAMICBASE:NO
+	./dbuild
