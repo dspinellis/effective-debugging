@@ -2,12 +2,12 @@
 
 #define N 100000000
 #define NTHREADS 8
+int values[N];
 
 int
 main(int argc, char *argv[])
 {
     int tid;
-    static int values[N];
     static int sum[NTHREADS];
 
 #ifdef _OPENMP
@@ -19,6 +19,6 @@ main(int argc, char *argv[])
     for (tid = 0; tid < NTHREADS; tid++) {
 #endif
 	for (int i = 0; i < N; i++)
-	    sum[tid] += values[i];
+	    sum[tid] += values[i] >> tid;
     }
 }
