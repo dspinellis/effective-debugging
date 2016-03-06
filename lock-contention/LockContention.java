@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class LockContention {
     static public void main(String[] args) {
-        int nTasks = Integer.parseInt(args[0]);
+        int nKeys = Integer.parseInt(args[0]);
         int nThreads = Integer.parseInt(args[1]);
         HashMap<PublicKey, PrivateKey> map = new HashMap<PublicKey,
             PrivateKey>();
@@ -27,7 +27,7 @@ public class LockContention {
 
         ExecutorService executor = Executors
             .newFixedThreadPool(nThreads);
-        for (int i = 0; i < nTasks; i++)
+        for (int i = 0; i < nKeys; i++)
             executor.submit(task);
         try {
             executor.shutdown();
