@@ -1,4 +1,4 @@
-Demonstrate speedup of R's mclapply function.
+Demonstrate speedup of R's mclapply function
 
 The speedup can be measured through the following two invocations.
 ```

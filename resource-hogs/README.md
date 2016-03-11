@@ -1,1 +1,1 @@
-Programs to demonstrate resource utilization issues.
+Demonstrate resource utilization issues

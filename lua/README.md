@@ -1,1 +1,1 @@
-Demonstrate debugging through the embedding of Lua.
+Demonstrate debugging through the embedding of Lua

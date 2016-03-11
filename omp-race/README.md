@@ -1,1 +1,1 @@
-Source code used for Intel Inspector XE demonstration.
+Source code used for Intel Inspector XE demonstration

@@ -1,1 +1,1 @@
-The code here demonstrates how FindBugs will report an ignored exception.
+Demonstrate how FindBugs will report an ignored exception

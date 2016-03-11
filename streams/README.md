@@ -1,4 +1,4 @@
-Demonstrate the concurrent name resolution of IP addresses.
+Demonstrate the concurrent name resolution of IP addresses
 
 Note that utilizing a large thread pool on a stream with .parallel(),
 as is done in `ResolveStream.java` isn't the way to go, because too few
