@@ -6,11 +6,11 @@ This repository contains the source code used in the book
 
 ## Chapter 1: High-Level Strategies
 
-### Item 7: Diversify your Build and Execution Environment
+### Item 7: Diversify Your Build and Execution Environment
 
 * [Demonstrate differences in the size of primitive elements among various architectures and operating systems](../master/size)
 
-## Chapter 2: General Purpose Methods and Practices
+## Chapter 2: General-Purpose Methods and Practices
 
 ### Item 12: Automate Complex Testing Scenarios
 
@@ -26,7 +26,7 @@ This repository contains the source code used in the book
 
 * [A doubly-linked list in Python](../master/dlist)
 
-### Item 37: Know how to View Assembly Code and Raw Memory
+### Item 37: Know How to View Assembly Code and Raw Memory
 
 * [Examples of how source code is compiled into assembly language](../master/asm)
 
@@ -44,7 +44,7 @@ This repository contains the source code used in the book
 
 * [Demonstration of assertions](../master/assert)
 
-### Item 49: Fix the Bug's Cause, Rather than its Symptom
+### Item 49: Fix the Bug's Cause, Rather Than Its Symptom
 
 * [Demonstrate and verify the use of modulo arithmetic rather than special cases](../master/modulo)
 
@@ -57,7 +57,6 @@ This repository contains the source code used in the book
 ### Item 51: Use Static Program Analysis
 
 * [Demonstrate how FindBugs will report an incorrect spin loop](../master/spin-wait)
-* [Demonstrate how FindBugs will report an ignored exception](../master/ex-ign)
 
 ### Item 52: Configure Deterministic Builds and Executions
 
@@ -77,9 +76,9 @@ This repository contains the source code used in the book
 
 * [Demonstrate the use of Valgrind to find memory errors](../master/valgrind)
 
-## Chapter 8: Debugging Multithreaded Code
+## Chapter 8: Debugging Multi-threaded Code
 
-### Item 60: Analyze Deadlocks with Post-Mortem Debugging
+### Item 60: Analyze Deadlocks with Postmortem Debugging
 
 * [Programs that deadlock](../master/deadlock)
 
@@ -100,7 +99,7 @@ This repository contains the source code used in the book
 
 * [Demonstrate scalability problem due false sharing](../master/false-share)
 
-### Item 66: Consider Rewriting the Code Using Higher Level Abstractions
+### Item 66: Consider Rewriting the Code Using Higher-Level Abstractions
 
 * [Demonstrate the speedup that can be obtained through the use of ATLAS](../master/atlas)
 * [Demonstrate speedup of R's mclapply function](../master/mclapply)
