@@ -6,7 +6,8 @@ public class LockContention {
     static public void main(String[] args) {
         int nKeys = Integer.parseInt(args[0]);
         int nThreads = Integer.parseInt(args[1]);
-        HashMap<PublicKey, PrivateKey> map = new HashMap<PublicKey,
+        HashMap<PublicKey, PrivateKey> map = 
+            new HashMap<PublicKey,
             PrivateKey>();
 
         Runnable task = () -> {

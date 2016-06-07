@@ -27,7 +27,8 @@ public class Resolve100CF {
 
         try {
             // Obtain list of lines
-            List<CompletableFuture<String>> list = Files.lines(path)
+            List<CompletableFuture<String>> list = 
+                Files.lines(path)
                 // Map lines into a future task
                 .map(line -> CompletableFuture.supplyAsync(
                             () -> addressName(line), fjp))

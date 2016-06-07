@@ -19,10 +19,12 @@ $LN2@main:				; Loop's top label
 	mov	DWORD PTR _i$[ebp], eax	; Store eax back to i
 $LN3@main:				; Loop's end label
 	cmp	DWORD PTR _i$[ebp], 10 	; Compare i to 10
-	jge	SHORT $LN1@main		; If greater or equal terminate loop
+	jge	SHORT $LN1@main		; If greater or equal 
+					; terminate loop
 	mov	ecx, DWORD PTR _i$[ebp]	; Get i into register ecx
 	push	ecx			; Push ecx as argument to printf
-	push	OFFSET $SG2748		; Push printf format string argument
+	push	OFFSET $SG2748		; Push printf format string 
+					; argument
 	call	_printf			; Call printf
 	add	esp, 8			; Free pushed printf arguments
 	jmp	SHORT $LN2@main		; Jump to loop's top

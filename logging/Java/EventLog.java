@@ -6,7 +6,8 @@ import java.util.logging.Logger;
 public class EventLog {
     public static void main(String[] args) {
         Logger logger = Logger.getGlobal();
-        logger.setLevel(Level.FINEST);     // Include detailed messages
+        // Include detailed messages
+        logger.setLevel(Level.FINEST);     
         FileHandler fileHandler = null;
         try {
             fileHandler = new FileHandler("app.log");

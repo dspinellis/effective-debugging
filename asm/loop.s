@@ -21,7 +21,8 @@ main:					@ Entry point of main
 .L2:					@ Loop's end label
 	ldr	r3, [fp, #-8]		@ Get i into register r3
 	cmp	r3, #9			@ Compare r3 with 9
-	ble	.L3			@ Branch if less or equal to loop's top
+	ble	.L3			@ If less or equal then 
+					@ branch to loops top
 	mov	r3, #0			@ Set r3 to zero
 	mov	r0, r3			@ Zero r0 as main's return value
 	sub	sp, fp, #4		@ Function exit boilerplate
