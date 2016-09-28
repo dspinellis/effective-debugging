@@ -1,7 +1,7 @@
 # Effective Debugging: Source Code
 
 This repository contains the source code used in the book
-*Effective Debugging* (Addison-Wesley, 2016).
+[Effective Debugging](http://www.spinellis.gr/debugging) (Addison-Wesley, 2016).
 
 
 ## Chapter 1: High-Level Strategies
