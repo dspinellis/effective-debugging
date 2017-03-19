@@ -1,6 +1,7 @@
 #include <math.h>
-#include "lua5.2/lua.h"
-#include "lua5.2/lauxlib.h"
+#include <lua.h>
+#include <lualib.h>
+#include <lauxlib.h>
 
 // Functions exposed to Lua
 static int l_sin(lua_State *L) {
