@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.List;
 
 /** Resolve IP addressed in file args[0] using 100 threads */
-public class Resolve100CF {
+public class ResolveFuture {
     /** Resolve the passed internet address into a name */
     static String addressName(String ipAddress) {
         try {
