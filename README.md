@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/47244756.svg)](https://zenodo.org/badge/latestdoi/47244756)
+
 # Effective Debugging: Source Code
 
 This repository contains the source code used in the book
